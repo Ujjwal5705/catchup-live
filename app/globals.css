@@ -1,0 +1,49 @@
+:root { --bg:#0b1020; --card:#151c33; --card2:#1c2542; --line:#263156; --txt:#e8ecf8; --dim:#8b96b8; --accent:#ff6b35; --green:#2dd4a7; --red:#ff5c7a; }
+* { box-sizing:border-box; margin:0; }
+body { background:var(--bg); color:var(--txt); font:15px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width:1080px; margin:0 auto; padding:16px; }
+header { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.logo { font-size:22px; font-weight:800; letter-spacing:.5px; }
+.logo span { color:var(--accent); }
+.live { background:var(--red); color:#fff; font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; animation:pulse 1.6s infinite; }
+@keyframes pulse { 50% { opacity:.55; } }
+.sim { margin-left:auto; color:var(--dim); font-size:12px; }
+.scorebug { background:linear-gradient(135deg,#1a2342,#101830); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin-bottom:14px; }
+.teams { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+.score { font-size:34px; font-weight:800; }
+.target { color:var(--dim); }
+.equation { margin-top:6px; font-size:17px; color:var(--accent); font-weight:600; }
+.meta { margin-top:4px; color:var(--dim); font-size:13px; }
+.winbar { height:8px; background:var(--card2); border-radius:6px; margin-top:12px; overflow:hidden; }
+.winbar > div { height:100%; background:linear-gradient(90deg,var(--green),var(--accent)); transition:width .6s; }
+.winlabel { font-size:12px; color:var(--dim); margin-top:5px; }
+.chips { display:flex; gap:6px; margin-top:12px; flex-wrap:wrap; }
+.chip { min-width:34px; text-align:center; padding:6px 8px; border-radius:10px; background:var(--card2); font-weight:700; font-size:13px; border:1px solid var(--line); }
+.chip.b4 { background:#14532d; } .chip.b6 { background:#7c2d12; } .chip.bW { background:#7f1d1d; } .chip.bwd { background:#3b3f5c; }
+.grid { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; }
+@media (max-width:820px){ .grid { grid-template-columns:1fr; } }
+.card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; }
+.card h3 { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:var(--dim); margin-bottom:10px; }
+.feed div { padding:7px 4px; border-bottom:1px solid var(--line); font-size:14px; }
+.feed .big { color:#ffd166; font-weight:600; }
+.feed .over { color:var(--dim); font-size:12px; margin-right:8px; }
+.tones { display:flex; gap:8px; margin-bottom:10px; }
+button { cursor:pointer; border:none; border-radius:10px; font-weight:700; }
+.tones button { flex:1; padding:8px; background:var(--card2); color:var(--txt); border:1px solid var(--line); font-size:13px; }
+.tones button.active { background:var(--accent); color:#111; }
+.catchbtn { width:100%; padding:12px; font-size:15px; background:var(--accent); color:#111; }
+.catchbtn:disabled { opacity:.6; cursor:default; }
+#recap { white-space:pre-wrap; margin-top:12px; font-size:14px; color:var(--txt); background:var(--card2); border-radius:12px; padding:12px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+td, th { text-align:left; padding:6px 4px; border-bottom:1px solid var(--line); }
+th { color:var(--dim); font-size:11px; text-transform:uppercase; }
+.chat { margin-top:14px; }
+#chatlog { max-height:260px; overflow-y:auto; margin-bottom:10px; display:flex; flex-direction:column; gap:8px; }
+.msg { padding:10px 12px; border-radius:12px; font-size:14px; white-space:pre-wrap; }
+.msg.user { background:var(--card2); align-self:flex-end; max-width:85%; }
+.msg.bot { background:#12233a; border:1px solid var(--line); align-self:flex-start; max-width:92%; }
+.msg .eng { display:block; font-size:10px; color:var(--dim); margin-top:4px; }
+.chatrow { display:flex; gap:8px; }
+.chatrow input { flex:1; background:var(--card2); border:1px solid var(--line); border-radius:10px; padding:11px; color:var(--txt); font-size:14px; outline:none; }
+.chatrow button { padding:0 18px; background:var(--green); color:#06281f; }
+.hint { color:var(--dim); font-size:12px; margin-top:8px; }
